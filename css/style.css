@@ -7,6 +7,7 @@ body {
   padding: 0;
   overflow: hidden;
   color: #fff; /* 白色字体 */
+  -webkit-font-smoothing: antialiased; /* 平滑字体 */
 }
 .container {
   max-width: 960px;
@@ -15,10 +16,11 @@ body {
   background-color: #1e1e1e; /* 较浅的背景色，用于与body背景区分 */
   border-radius: 12px; /* 更大的圆角 */
   box-shadow: 0 10px 30px rgba(0,0,0,0.4), 0 6px 10px rgba(0,0,0,0.3), inset 0 1px 3px rgba(255,255,255,0.1); /* 内部阴影效果 */
-  transition: transform 0.3s ease; /* 增加变换效果 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* 增加变换和阴影过渡效果 */
 }
 .container:hover {
   transform: translateY(-5px); /* 悬停时提升容器 */
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5), 0 8px 15px rgba(0,0,0,0.4); /* 增加次级阴影 */
 }
 /* 导入部分的 CSS 模块 */
 .header {
@@ -76,6 +78,7 @@ h6 {
   font-family: 'Roboto Slab', serif; /* 标题使用衬线字体 */
   margin-bottom: 1rem;
   color: #fff; /* 标题颜色 */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /* 标题文字阴影 */
 }
 p {
   margin-bottom: 1rem;
@@ -98,11 +101,12 @@ button {
   cursor: pointer;
   font-size: 1rem;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3), 0 2px 4px rgba(0,0,0,0.2); /* 增加次级阴影 */
-  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* 添加过渡效果 */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* 添加过渡效果 */
 }
 button:hover {
   background-color: #3700b3; /* 按钮悬停颜色 */
   box-shadow: 0 6px 12px rgba(0,0,0,0.4), 0 3px 6px rgba(0,0,0,0.3); /* 增加次级阴影 */
+  transform: translateY(-3px); /* 悬停时提升按钮 */
 }
 /* 添加更多自定义样式 */
 input,
@@ -114,10 +118,11 @@ textarea {
   padding: 10px;
   font-size: 1rem;
   margin-bottom: 1rem;
-  transition: border-color 0.3s ease; /* 添加过渡效果 */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* 添加过渡效果 */
 }
 input:focus,
 textarea:focus {
   border-color: #bb86fc; /* 焦点时边框颜色 */
+  box-shadow: 0 0 5px rgba(187,134,252,0.5); /* 焦点时的阴影效果 */
   outline: none; /* 移除默认的焦点样式 */
 }
