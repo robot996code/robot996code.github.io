@@ -1,15 +1,22 @@
 body {
-  background-color: RGB(19, 19, 21);
-  font-family: Helvetica Neue, Helvetica, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
-  font-size: 1.25rem;
-  line-height: 1.5;
+  background-color: #121212; /* 深色背景 */
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; /* 使用更现代的字体 */
+  font-size: 1.2rem; /* 略微调整字体大小 */
+  line-height: 1.6; /* 增加行高以提高可读性 */
   margin: 0;
+  padding: 0;
   overflow: hidden;
+  color: #fff; /* 白色字体 */
 }
 .container {
   max-width: 960px;
-  margin: 0 auto;
+  margin: 20px auto; /* 增加一些外边距 */
+  padding: 20px; /* 增加内部填充 */
+  background-color: #1e1e1e; /* 较浅的背景色，用于与body背景区分 */
+  border-radius: 8px; /* 圆角 */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* 盒子阴影 */
 }
+/* 导入部分的 CSS 模块 */
 .header {
   margin-top: 2em;
   display: flex;
@@ -54,4 +61,37 @@ h2 {
 }
 .timer b {
   color: #fd637d;
+}
+/* 其他自定义样式 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto Slab', serif; /* 标题使用衬线字体 */
+  margin-bottom: 1rem;
+  color: #fff; /* 标题颜色 */
+}
+p {
+  margin-bottom: 1rem;
+}
+a {
+  color: #bb86fc; /* 链接颜色 */
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+button {
+  background-color: #bb86fc; /* 按钮背景颜色 */
+  color: #fff; /* 按钮文字颜色 */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+button:hover {
+  background-color: #3700b3; /* 按钮悬停颜色 */
 }
