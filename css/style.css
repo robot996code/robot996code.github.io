@@ -2,12 +2,12 @@ body {
   background-color: RGB(236, 236, 234);
   font-family: Helvetica Neue, Helvetica, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
   font-size: 1.25rem;
-  line-height: 1.5;
+  line-height: 2;
   margin: 0;
   overflow: hidden;
 }
 .container {
-  max-width: 960px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 .header {
@@ -40,12 +40,12 @@ body {
 }
 .date {
   margin: 1em auto;
-  padding: 30px 50px;
+  padding: 40px 50px;
   text-align: center;
 }
 h2 {
-  font-size: 30px;
-  color: #fd637d;
+  font-size: 20px;
+  color: #54ff9f;
 }
 .timer {
   font-size: 30px;
