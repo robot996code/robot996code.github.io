@@ -12,7 +12,7 @@ body {
   max-width: 960px;
   margin: 20px auto; /* 增加一些外边距 */
   padding: 20px; /* 增加内部填充 */
-  background-color: #1e1e1e; /* 较浅的背景色，用于与body背景区分 */
+  background-color: rgba(30,30,30,0.8); /* 半透明背景色 */
   border-radius: 8px; /* 圆角 */
   box-shadow: 0 10px 20px rgba(0,0,0,0.3), 0 6px 6px rgba(0,0,0,0.23); /* 增加次级阴影 */
 }
