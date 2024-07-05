@@ -12,9 +12,9 @@ body {
   max-width: 960px;
   margin: 20px auto; /* 增加一些外边距 */
   padding: 20px; /* 增加内部填充 */
-  background-color: rgba(30,30,30,0.8); /* 半透明背景色 */
+  background-color: rgba(30,30,30,0.6); /* 半透明背景色 */
   border-radius: 8px; /* 圆角 */
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3), 0 6px 6px rgba(0,0,0,0.23); /* 增加次级阴影 */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2), 0 6px 6px rgba(0,0,0,0.23); /* 增加次级阴影 */
 }
 /* 导入部分的 CSS 模块 */
 .header {
