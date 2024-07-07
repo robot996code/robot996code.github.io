@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%); /* 渐变背景，甜蜜的粉红色和淡紫色 */
+  background: linear-gradient(135deg, #d0c1c6, #fad0c4); /* 使用灰粉色和淡紫色渐变背景 */
   font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; /* 使用更现代的字体 */
   font-size: 1.2rem; /* 略微调整字体大小 */
   line-height: 1.6; /* 增加行高以提高可读性 */
@@ -77,33 +77,6 @@ h6 {
   font-family: 'Roboto Slab', serif; /* 标题使用衬线字体 */
   margin-bottom: 1rem;
   color: #fff; /* 标题颜色 */
-  position: relative; /* 为动画效果设置 */
-}
-h1:after,
-h2:after,
-h3:after,
-h4:after,
-h5:after,
-h6:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background: #ffb6c1; /* 浅粉色下划线 */
-  bottom: -5px;
-  left: 0;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.3s ease;
-}
-h1:hover:after,
-h2:hover:after,
-h3:hover:after,
-h4:hover:after,
-h5:hover:after,
-h6:hover:after {
-  transform: scaleX(1);
-  transform-origin: left;
 }
 p {
   margin-bottom: 1rem;
@@ -111,23 +84,9 @@ p {
 a {
   color: #ff69b4; /* 热粉色链接颜色 */
   text-decoration: none;
-  position: relative; /* 为动画效果设置 */
 }
-a:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background: #ff69b4; /* 热粉色下划线 */
-  bottom: -2px;
-  left: 0;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.3s ease;
-}
-a:hover:after {
-  transform: scaleX(1);
-  transform-origin: left;
+a:hover {
+  text-decoration: underline;
 }
 button {
   background-color: #ff69b4; /* 按钮背景颜色 */
@@ -138,53 +97,8 @@ button {
   cursor: pointer;
   font-size: 1rem;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* 按钮阴影 */
-  transition: background-color 0.3s ease, transform 0.3s ease; /* 添加过渡效果 */
+  transition: background-color 0.3s ease; /* 添加过渡效果 */
 }
 button:hover {
   background-color: #ff1493; /* 按钮悬停颜色 */
-  transform: scale(1.1); /* 鼠标悬停时放大 */
-}
-.container,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-a,
-button {
-  animation: fadeIn 1s ease;
-}
-@-moz-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-o-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
