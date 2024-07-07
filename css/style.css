@@ -1,5 +1,5 @@
 body {
-  background-color: #121212; /* 深色背景 */
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%); /* 渐变背景，甜蜜的粉红色和淡紫色 */
   font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; /* 使用更现代的字体 */
   font-size: 1.2rem; /* 略微调整字体大小 */
   line-height: 1.6; /* 增加行高以提高可读性 */
@@ -12,7 +12,7 @@ body {
   max-width: 960px;
   margin: 20px auto; /* 增加一些外边距 */
   padding: 20px; /* 增加内部填充 */
-  background-color: rgba(30,30,30,0.3); /* 半透明背景色 */
+  background-color: rgba(255,255,255,0.3); /* 半透明白色背景 */
   border-radius: 8px; /* 圆角 */
   box-shadow: 0 10px 20px rgba(0,0,0,0.2), 0 6px 6px rgba(0,0,0,0.23); /* 增加次级阴影 */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* 添加过渡效果 */
@@ -89,7 +89,7 @@ h6:after {
   position: absolute;
   width: 100%;
   height: 2px;
-  background: #bb86fc;
+  background: #ffb6c1; /* 浅粉色下划线 */
   bottom: -5px;
   left: 0;
   transform: scaleX(0);
@@ -109,7 +109,7 @@ p {
   margin-bottom: 1rem;
 }
 a {
-  color: #bb86fc; /* 链接颜色 */
+  color: #ff69b4; /* 热粉色链接颜色 */
   text-decoration: none;
   position: relative; /* 为动画效果设置 */
 }
@@ -118,7 +118,7 @@ a:after {
   position: absolute;
   width: 100%;
   height: 2px;
-  background: #bb86fc;
+  background: #ff69b4; /* 热粉色下划线 */
   bottom: -2px;
   left: 0;
   transform: scaleX(0);
@@ -130,7 +130,7 @@ a:hover:after {
   transform-origin: left;
 }
 button {
-  background-color: #bb86fc; /* 按钮背景颜色 */
+  background-color: #ff69b4; /* 按钮背景颜色 */
   color: #fff; /* 按钮文字颜色 */
   border: none;
   padding: 10px 20px;
@@ -141,7 +141,7 @@ button {
   transition: background-color 0.3s ease, transform 0.3s ease; /* 添加过渡效果 */
 }
 button:hover {
-  background-color: #3700b3; /* 按钮悬停颜色 */
+  background-color: #ff1493; /* 按钮悬停颜色 */
   transform: scale(1.1); /* 鼠标悬停时放大 */
 }
 .container,
