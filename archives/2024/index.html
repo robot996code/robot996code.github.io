@@ -5,12 +5,31 @@
   <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
     <meta name="renderer" content="webkit">
     <title>关于你我❥(^_-)</title>
+
+    <!-- Baidu Tongji -->
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+    <!-- Busuanzi 统计脚本 -->
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
     <style>
-        /* 内嵌的CSS样式 */
+        /* CSS goes here */
         body {
             font-family: Arial, sans-serif;
             background-color: #f9f9f9;
@@ -22,45 +41,44 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
+            position: relative;
         }
 
-        .container {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .stats {
-            margin: 10px 0;
-            padding: 15px;
-            border: 1px solid #ddd;
+        .busuanzi-stats {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            text-align: right;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
             border-radius: 8px;
-            background-color: #fff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
         }
 
-        .stats:hover {
-            transform: translateY(-5px);
+        .busuanzi-stats div {
+            margin: 5px 0;
         }
 
-        .stats span {
+        .busuanzi-stats span {
             font-weight: bold;
             color: #ff4500;
         }
     </style>
-    <!-- Busuanzi 统计脚本 -->
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <meta name="generator" content="Hexo 7.3.0"></head>
 <body>
     <div class="container">
         <h1>关于你我❥(^_-)</h1>
-        <div class="stats" id="busuanzi_container_site_pv">
+        <!-- Add your main content here -->
+    </div>
+
+    <div class="busuanzi-stats">
+        <div id="busuanzi_container_site_pv">
             本站总访问量<span id="busuanzi_value_site_pv"></span>次
         </div>
-        <div class="stats" id="busuanzi_container_site_uv">
+        <div id="busuanzi_container_site_uv">
             本站访客数<span id="busuanzi_value_site_uv"></span>人
         </div>
-        <div class="stats" id="busuanzi_container_page_pv">
+        <div id="busuanzi_container_page_pv">
             本页面访问量<span id="busuanzi_value_page_pv"></span>次
         </div>
     </div>
