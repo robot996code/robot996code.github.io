@@ -8,14 +8,14 @@ body {
   padding: 0;
   overflow: hidden;
   color: #fff; /* 白色字体 */
-  
+
 }
 
 .container {
   max-width: 960px;
   margin: 20px auto; /* 增加一些外边距 */
   padding: 20px; /* 增加内部填充 */
-  background-color: rgba(18, 210, 63, 0.903); /* 半透明白色背景 */
+  background-color: rgba(196, 210, 199, 0.578); /* 半透明白色背景 */
   border-radius: 8px; /* 圆角 */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.23); /* 增加次级阴影 */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* 添加过渡效果 */
