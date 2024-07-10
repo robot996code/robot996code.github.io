@@ -3,7 +3,7 @@ body {
   background-color: #121212; /* 深色背景 */
   font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; /* 使用更现代的字体 */
   font-size: 1.2rem; /* 略微调整字体大小 */
-  line-height: 1.6; /* 增加行高以提高可读性 */
+  line-height: 1.5; /* 增加行高以提高可读性 */
   margin: 0;
   padding: 0;
   overflow: hidden;
