@@ -107,48 +107,22 @@
               background-color: #f8f0fc; /* 背景颜色 */
               color: #5c3c92; /* 文字颜色 */
               font-family: 'Arial', sans-serif; /* 字体 */
-              border-radius: 10px; /* 边框圆角 */
-              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影效果 */
-              padding: 20px; /* 内边距 */
-              margin: 20px; /* 外边距 */
             }
             .aplayer .aplayer-title {
               color: #d6336c; /* 标题颜色 */
-              font-size: 18px; /* 标题字体大小 */
-              font-weight: bold; /* 标题字体加粗 */
             }
             .aplayer .aplayer-author {
               color: #a61e4d; /* 作者颜色 */
-              font-size: 14px; /* 作者字体大小 */
-              margin-bottom: 10px; /* 作者与标题之间的距离 */
             }
             .aplayer .aplayer-list {
               background-color: #fff4e6; /* 播放列表背景颜色 */
               text-align: left; /* 歌单左对齐 */
-              border-radius: 10px; /* 边框圆角 */
-              padding: 10px; /* 内边距 */
-              max-height: 200px; /* 最大高度 */
-              overflow-y: auto; /* 垂直滚动条 */
             }
             .aplayer .aplayer-list .aplayer-list-light {
               color: #ffa94d; /* 播放列表文字颜色 */
             }
             .aplayer .aplayer-icon {
               fill: #da77f2; /* 图标颜色 */
-            }
-            /* 自定义播放按钮 */
-            .aplayer .aplayer-button {
-              background-color: #da77f2; /* 按钮背景颜色 */
-              border-radius: 50%; /* 按钮圆角 */
-              width: 40px; /* 按钮宽度 */
-              height: 40px; /* 按钮高度 */
-              display: flex;
-              align-items: center;
-              justify-content: center;
-            }
-            .aplayer .aplayer-pic {
-              border-radius: 10px; /* 封面图圆角 */
-              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 封面图阴影 */
             }
           </style>
 
@@ -186,6 +160,56 @@
 
   <!--鼠标点击显示爱心-->
   <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/love.js"></script>
+  <style>
+    /* 自定义爱心样式 */
+    @keyframes heart-float {
+      0% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1.5) translateY(-50px);
+        opacity: 0;
+      }
+    }
+    .love-heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #ff6b6b;
+      transform: rotate(45deg);
+      animation: heart-float 1s ease-in-out forwards;
+    }
+    .love-heart:before,
+    .love-heart:after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #ff6b6b;
+      border-radius: 50%;
+    }
+    .love-heart:before {
+      top: -10px;
+      left: 0;
+    }
+    .love-heart:after {
+      left: 10px;
+      top: 0;
+    }
+  </style>
+  <script>
+    document.addEventListener('click', function(e) {
+      var heart = document.createElement('div');
+      heart.className = 'love-heart';
+      heart.style.left = e.pageX + 'px';
+      heart.style.top = e.pageY + 'px';
+      document.body.appendChild(heart);
+      setTimeout(function() {
+        heart.remove();
+      }, 1000);
+    });
+  </script>
 </section>
 
       </main>
