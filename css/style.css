@@ -1,5 +1,6 @@
+/* 全局样式 */
 body {
-  background-color: #121212; /* 深色背景 */
+  background: linear-gradient(135deg, rgb(208, 193, 198), #fad0c4); /* 使用灰粉色和淡紫色渐变背景 */
   font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; /* 使用更现代的字体 */
   font-size: 1.2rem; /* 略微调整字体大小 */
   line-height: 1.6; /* 增加行高以提高可读性 */
@@ -8,92 +9,120 @@ body {
   overflow: hidden;
   color: #fff; /* 白色字体 */
 }
+
 .container {
   max-width: 960px;
   margin: 20px auto; /* 增加一些外边距 */
   padding: 20px; /* 增加内部填充 */
-  background-color: rgba(30,30,30,0.3); /* 半透明背景色 */
+  background-color: rgba(255, 255, 255, 0.3); /* 半透明白色背景 */
   border-radius: 8px; /* 圆角 */
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2), 0 6px 6px rgba(0,0,0,0.23); /* 增加次级阴影 */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.23); /* 增加次级阴影 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* 添加过渡效果 */
 }
-/* 导入部分的 CSS 模块 */
+
+.container:hover {
+  transform: translateY(-10px); /* 鼠标悬停时向上移动 */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), 0 10px 10px rgba(0, 0, 0, 0.3); /* 加深阴影效果 */
+}
+
+/* 头部样式 */
 .header {
   margin-top: 2em;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
 }
+
 .header .blog-title .logo {
   color: #fd637d;
   font-size: 2em;
   font-family: "Comic Sans MS", cursive, LiSu, sans-serif;
   text-decoration: none;
 }
+
 .header .menu {
   margin: 0;
   padding: 0;
   color: #fd637d;
 }
+
 .header .menu .menu-item {
   display: inline-block;
   margin-right: 10px;
 }
+
 .header .menu .menu-item-link {
   color: #fd637d;
   text-decoration: none;
 }
+
 .header .menu .menu-item-link:hover {
   color: #368ccb;
 }
+
+/* 日期样式 */
 .date {
   margin: 1em auto;
   padding: 40px 50px;
   text-align: center;
 }
+
 h2 {
   font-size: 20px;
   color: #54ff9f;
 }
+
+/* 计时器样式 */
 .timer {
   font-size: 30px;
   line-height: 1.5;
   margin: 1em 0;
 }
+
 .timer b {
   color: #fd637d;
 }
-/* 其他自定义样式 */
+
+/* 标题字体优化 */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: 'Roboto Slab', serif; /* 标题使用衬线字体 */
+  font-family: 'Noto Serif SC', serif; /* 标题使用更优美的衬线字体 */
   margin-bottom: 1rem;
   color: #fff; /* 标题颜色 */
 }
+
+/* 段落字体优化 */
 p {
   margin-bottom: 1rem;
 }
+
+/* 链接样式 */
 a {
-  color: #bb86fc; /* 链接颜色 */
+  color: #ff69b4; /* 热粉色链接颜色 */
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: underline;
 }
+
+/* 按钮样式 */
 button {
-  background-color: #bb86fc; /* 按钮背景颜色 */
+  background-color: #ff69b4; /* 按钮背景颜色 */
   color: #fff; /* 按钮文字颜色 */
   border: none;
   padding: 10px 20px;
   border-radius: 4px;
   cursor: pointer;
   font-size: 1rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* 按钮阴影 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* 按钮阴影 */
   transition: background-color 0.3s ease; /* 添加过渡效果 */
 }
+
 button:hover {
-  background-color: #3700b3; /* 按钮悬停颜色 */
+  background-color: #ff1493; /* 按钮悬停颜色 */
 }
