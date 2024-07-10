@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-  max-width: 960px;
+  max-width: 900px;
   margin: 20px auto; /* 增加一些外边距 */
   padding: 20px; /* 增加内部填充 */
   background-color: rgba(8, 9, 8, 0.3); /* 半透明白色背景 */
