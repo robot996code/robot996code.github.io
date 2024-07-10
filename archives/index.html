@@ -20,7 +20,40 @@
             s.parentNode.insertBefore(hm, s);
         })();
     </script> -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            function updateBusuanziValues() {
+                var pvElement = document.getElementById("busuanzi_value_site_pv");
+                var uvElement = document.getElementById("busuanzi_value_site_uv");
 
+                if (pvElement && uvElement && pvElement.innerText && uvElement.innerText) {
+                    var pvValue = parseInt(pvElement.innerText.replace(/,/g, ''), 10);
+                    var uvValue = parseInt(uvElement.innerText.replace(/,/g, ''), 10);
+
+                    var pvSubtract = 500; // Number to subtract from PV
+                    var uvSubtract = 100; // Number to subtract from UV
+
+                    if (!isNaN(pvValue)) {
+                        pvElement.innerText = (pvValue - pvSubtract).toLocaleString();
+                    }
+                    if (!isNaN(uvValue)) {
+                        uvElement.innerText = (uvValue - uvSubtract).toLocaleString();
+                    }
+                }
+            }
+
+            // Wait for Busuanzi to load
+            function checkBusuanzi() {
+                if (typeof busuanzi !== "undefined" && busuanzi._loadScript) {
+                    updateBusuanziValues();
+                } else {
+                    setTimeout(checkBusuanzi, 100); // Retry after 100ms
+                }
+            }
+            
+            checkBusuanzi();
+        });
+    </script>
     <!-- Busuanzi 统计脚本 -->
     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
@@ -69,40 +102,7 @@
         <div id="busuanzi_container_site_uv"><i class="fa fa-heart"></i> 本站总访客数 <span id="busuanzi_value_site_uv"></span> 人</div>
     </div>
     <!-- # 自定义次数 -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            function updateBusuanziValues() {
-                var pvElement = document.getElementById("busuanzi_value_site_pv");
-                var uvElement = document.getElementById("busuanzi_value_site_uv");
-
-                if (pvElement && uvElement && pvElement.innerText && uvElement.innerText) {
-                    var pvValue = parseInt(pvElement.innerText.replace(/,/g, ''), 10);
-                    var uvValue = parseInt(uvElement.innerText.replace(/,/g, ''), 10);
-
-                    var pvSubtract = 500; // Number to subtract from PV
-                    var uvSubtract = 100; // Number to subtract from UV
-
-                    if (!isNaN(pvValue)) {
-                        pvElement.innerText = (pvValue - pvSubtract).toLocaleString();
-                    }
-                    if (!isNaN(uvValue)) {
-                        uvElement.innerText = (uvValue - uvSubtract).toLocaleString();
-                    }
-                }
-            }
-
-            // Wait for Busuanzi to load
-            function checkBusuanzi() {
-                if (typeof busuanzi !== "undefined" && busuanzi._loadScript) {
-                    updateBusuanziValues();
-                } else {
-                    setTimeout(checkBusuanzi, 100); // Retry after 100ms
-                }
-            }
-            
-            checkBusuanzi();
-        });
-    </script>
+    
 </body>
 </html>
 
