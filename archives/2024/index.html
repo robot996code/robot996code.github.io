@@ -122,77 +122,79 @@
       <main class="main">
       <section class="date">
   <div class="date">
-      <h2><span style="color:#d6336c;">Robot</span> and <span style="color:#d6336c;">Piggy</span><br> 在一起 ♥♥ <br>共同度过</h2>
-      <div class="timer">
-        <b id="d"></b> Days <b id="h"></b> Hours <b id="m"></b> Minutes <b id="s"></b> Seconds
-      </div>
-      <div class="song">
-          <!--页面底部歌词-->
-          <!-- require APlayer -->
-          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-          <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-          <!-- require MetingJS -->
-          <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+    <h2 style="font-family: 'Arial', sans-serif; color: #3abafa;">
+      <span style="color:#d6336c;">Robot</span> and <span style="color:#d6336c;">Piggy</span><br><br>
+      在一起 ♥♥ 共同度过
+    </h2>
+    <div class="timer">
+      <b id="d"></b> Days <b id="h"></b> Hours <b id="m"></b> Minutes <b id="s"></b> Seconds
+    </div>
+    <div class="song">
+      <!-- 页面底部歌词 -->
+      <!-- require APlayer -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+      <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+      <!-- require MetingJS -->
+      <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
 
-          <!-- 自定义CSS样式 -->
-          <style>
-            /* 自定义音乐播放器的颜色和字体 */
-            .aplayer {
-              background-color: #3abafa; /* 背景颜色 */
-              color: #3c9287; /* 文字颜色 */
-              font-family: 'Arial', sans-serif; /* 字体 */
-            }
-            .aplayer .aplayer-title {
-              color: #1be7cc; /* 标题颜色 */
-            }
-            .aplayer .aplayer-author {
-              color: #a61e4d; /* 作者颜色 */
-            }
-            .aplayer .aplayer-list {
-              background-color: #fff4e6; /* 播放列表背景颜色 */
-              text-align: left; /* 歌单左对齐 */
-            }
-            .aplayer .aplayer-list .aplayer-list-light {
-              color: #ffa94d; /* 播放列表文字颜色 */
-            }
-            .aplayer .aplayer-icon {
-              fill: #0bee1e; /* 图标颜色 */
-            }
-          </style>
+      <!-- 自定义CSS样式 -->
+      <style>
+        /* 自定义音乐播放器的颜色和字体 */
+        .aplayer {
+          background-color: #3abafa; /* 背景颜色 */
+          color: #3c9287; /* 文字颜色 */
+          font-family: 'Arial', sans-serif; /* 字体 */
+        }
+        .aplayer .aplayer-title {
+          color: #1be7cc; /* 标题颜色 */
+        }
+        .aplayer .aplayer-author {
+          color: #a61e4d; /* 作者颜色 */
+        }
+        .aplayer .aplayer-list {
+          background-color: #fff4e6; /* 播放列表背景颜色 */
+          text-align: left; /* 歌单左对齐 */
+        }
+        .aplayer .aplayer-list .aplayer-list-light {
+          color: #ffa94d; /* 播放列表文字颜色 */
+        }
+        .aplayer .aplayer-icon {
+          fill: #0bee1e; /* 图标颜色 */
+        }
+      </style>
 
-          <meting-js 
-            server="netease"
-            type="playlist"
-            id="12268503415"
-            fixed="true"
-            autoplay="true"
-            order="list"
-            loop="all"></meting-js>
-      </div>
+      <meting-js 
+        server="netease"
+        type="playlist"
+        id="12268503415"
+        fixed="true"
+        autoplay="true"
+        order="list"
+        loop="all"></meting-js>
+    </div>
   </div>
 
-  <!--计时器js-->
+  <!-- 计时器js -->
   <script>
     function timer() {
       window.setTimeout("timer()", 1000);
       var start = new Date("2024/05/10 00:00:00");
       var t = new Date().getTime() - start;
       var h = ~~(t / 1000 / 60 / 60 % 24);
-      if (h < 10) {h = "0" + h;}
+      if (h < 10) { h = "0" + h; }
       var m = ~~(t / 1000 / 60 % 60);
-      if (m < 10) { m = "0" + m;}
+      if (m < 10) { m = "0" + m; }
       var s = ~~(t / 1000 % 60);
-      if (s < 10) {s = "0" + s;}
+      if (s < 10) { s = "0" + s; }
       document.getElementById('d').innerHTML = ~~(t / 1000 / 60 / 60 / 24);
       document.getElementById('h').innerHTML = h;
       document.getElementById('m').innerHTML = m;
       document.getElementById('s').innerHTML = s;
     }
     timer();
-  </script> 
-  <!--END：计时器js-->
+  </script>
 
-  <!--鼠标点击显示爱心-->
+  <!-- 鼠标点击显示爱心 -->
   <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/love.js"></script>
   <style>
     /* 自定义爱心样式 */
