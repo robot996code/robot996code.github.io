@@ -74,41 +74,35 @@
             function updateBusuanziValues() {
                 var pvElement = document.getElementById("busuanzi_value_site_pv");
                 var uvElement = document.getElementById("busuanzi_value_site_uv");
-        
-                if (!pvElement || !uvElement || pvElement.innerText === "" || uvElement.innerText === "") {
-                    setTimeout(updateBusuanziValues, 100); // Retry after 100ms
-                    return;
-                }
-        
-                var pvValue = parseInt(pvElement.innerText, 10);
-                var uvValue = parseInt(uvElement.innerText, 10);
-        
-                var pvSubtract = 500; // Number to subtract from PV
-                var uvSubtract = 100; // Number to subtract from UV
-        
-                if (!isNaN(pvValue)) {
-                    pvElement.innerText = pvValue - pvSubtract;
-                }
-                if (!isNaN(uvValue)) {
-                    uvElement.innerText = uvValue - uvSubtract;
-                }
-            }
-        
-            // Wait for Busuanzi to load
-            if (typeof busuanzi !== "undefined") {
-                updateBusuanziValues();
-            } else {
-                var interval = setInterval(function() {
-                    if (typeof busuanzi !== "undefined") {
-                        updateBusuanziValues();
-                        clearInterval(interval);
-                    }
-                }, 100); // Check every 100 milliseconds
-            }
-        });
-        </script>
-        
 
+                if (pvElement && uvElement && pvElement.innerText && uvElement.innerText) {
+                    var pvValue = parseInt(pvElement.innerText.replace(/,/g, ''), 10);
+                    var uvValue = parseInt(uvElement.innerText.replace(/,/g, ''), 10);
+
+                    var pvSubtract = 500; // Number to subtract from PV
+                    var uvSubtract = 100; // Number to subtract from UV
+
+                    if (!isNaN(pvValue)) {
+                        pvElement.innerText = (pvValue - pvSubtract).toLocaleString();
+                    }
+                    if (!isNaN(uvValue)) {
+                        uvElement.innerText = (uvValue - uvSubtract).toLocaleString();
+                    }
+                }
+            }
+
+            // Wait for Busuanzi to load
+            function checkBusuanzi() {
+                if (typeof busuanzi !== "undefined" && busuanzi._loadScript) {
+                    updateBusuanziValues();
+                } else {
+                    setTimeout(checkBusuanzi, 100); // Retry after 100ms
+                }
+            }
+            
+            checkBusuanzi();
+        });
+    </script>
 </body>
 </html>
 
@@ -128,7 +122,7 @@
       <main class="main">
       <section class="date">
   <div class="date">
-      <h2><span style="color:#d6336c;">Robot</span> and <span style="color:#d6336c;">Piggy</span><br> 在一起 ♥♥ 共同度过</h2>
+      <h2><span style="color:#d6336c;">Robot</span> and <span style="color:#d6336c;">Piggy</span><br> 在一起 ♥♥ <br>共同度过</h2>
       <div class="timer">
         <b id="d"></b> Days <b id="h"></b> Hours <b id="m"></b> Minutes <b id="s"></b> Seconds
       </div>
@@ -144,12 +138,13 @@
           <style>
             /* 自定义音乐播放器的颜色和字体 */
             .aplayer {
-              background-color: #f8f0fc; /* 背景颜色 */
+              background-color: #3abafa; /* 背景颜色 */
               color: #5c3c92; /* 文字颜色 */
               font-family: 'Arial', sans-serif; /* 字体 */
             }
+  
             .aplayer .aplayer-title {
-              color: #d6336c; /* 标题颜色 */
+              color: #1be7cc; /* 标题颜色 */
             }
             .aplayer .aplayer-author {
               color: #a61e4d; /* 作者颜色 */
@@ -166,7 +161,14 @@
             }
           </style>
 
-          
+          <meting-js 
+            server="netease"
+            type="playlist"
+            id="12268503415"
+            fixed="true"
+            autoplay="true"
+            order="list"
+            loop="all"></meting-js>
       </div>
   </div>
 
