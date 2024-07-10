@@ -68,6 +68,46 @@
         <div id="busuanzi_container_site_pv"><i class="fa fa-heart"></i> 本站总访问量 <span id="busuanzi_value_site_pv"-562></span> 次</div>
         <div id="busuanzi_container_site_uv"><i class="fa fa-heart"></i> 本站总访客数 <span id="busuanzi_value_site_uv"-100></span> 人</div>
     </div>
+    <!-- # 自定义次数 -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            function updateBusuanziValues() {
+                var pvElement = document.getElementById("busuanzi_value_site_pv");
+                var uvElement = document.getElementById("busuanzi_value_site_uv");
+        
+                if (!pvElement || !uvElement || pvElement.innerText === "" || uvElement.innerText === "") {
+                    setTimeout(updateBusuanziValues, 100); // Retry after 100ms
+                    return;
+                }
+        
+                var pvValue = parseInt(pvElement.innerText, 10);
+                var uvValue = parseInt(uvElement.innerText, 10);
+        
+                var pvSubtract = 500; // Number to subtract from PV
+                var uvSubtract = 100; // Number to subtract from UV
+        
+                if (!isNaN(pvValue)) {
+                    pvElement.innerText = pvValue - pvSubtract;
+                }
+                if (!isNaN(uvValue)) {
+                    uvElement.innerText = uvValue - uvSubtract;
+                }
+            }
+        
+            // Wait for Busuanzi to load
+            if (typeof busuanzi !== "undefined") {
+                updateBusuanziValues();
+            } else {
+                var interval = setInterval(function() {
+                    if (typeof busuanzi !== "undefined") {
+                        updateBusuanziValues();
+                        clearInterval(interval);
+                    }
+                }, 100); // Check every 100 milliseconds
+            }
+        });
+        </script>
+        
 
 </body>
 </html>
