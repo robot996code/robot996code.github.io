@@ -107,21 +107,44 @@
               background-color: #f8f0fc; /* 背景颜色 */
               color: #5c3c92; /* 文字颜色 */
               font-family: 'Arial', sans-serif; /* 字体 */
+              border-radius: 10px; /* 边框圆角 */
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+              padding: 20px; /* 内边距 */
+              margin: 20px; /* 外边距 */
             }
             .aplayer .aplayer-title {
               color: #d6336c; /* 标题颜色 */
+              font-size: 18px; /* 标题字体大小 */
+              font-weight: bold; /* 标题字体加粗 */
             }
             .aplayer .aplayer-author {
               color: #a61e4d; /* 作者颜色 */
+              font-size: 14px; /* 作者字体大小 */
+              margin-bottom: 10px; /* 作者与标题之间的距离 */
             }
             .aplayer .aplayer-list {
               background-color: #fff4e6; /* 播放列表背景颜色 */
+              text-align: left; /* 歌单左对齐 */
+              border-radius: 10px; /* 边框圆角 */
+              padding: 10px; /* 内边距 */
+              max-height: 200px; /* 最大高度 */
+              overflow-y: auto; /* 垂直滚动条 */
             }
             .aplayer .aplayer-list .aplayer-list-light {
               color: #ffa94d; /* 播放列表文字颜色 */
             }
             .aplayer .aplayer-icon {
               fill: #da77f2; /* 图标颜色 */
+            }
+            /* 自定义播放按钮 */
+            .aplayer .aplayer-button {
+              background-color: #da77f2; /* 按钮背景颜色 */
+              border-radius: 50%; /* 按钮圆角 */
+              width: 40px; /* 按钮宽度 */
+              height: 40px; /* 按钮高度 */
+              display: flex;
+              align-items: center;
+              justify-content: center;
             }
           </style>
 
